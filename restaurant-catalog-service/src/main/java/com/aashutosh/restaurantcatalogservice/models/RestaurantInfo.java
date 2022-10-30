@@ -1,4 +1,4 @@
-package com.aashutosh.restaurantInfoService.models;
+package com.aashutosh.restaurantcatalogservice.models;
 
 public class RestaurantInfo {
 
@@ -15,6 +15,9 @@ public class RestaurantInfo {
         this.id = id;
         this.name = name;
         this.city = city;
+    }
+
+    public RestaurantInfo() {
     }
 
     public int getId() {

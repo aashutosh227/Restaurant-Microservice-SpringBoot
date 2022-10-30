@@ -4,30 +4,22 @@ import java.util.List;
 
 public class CatalogItem {
 
-    String restoName;
-    String city;
+    private RestaurantInfo restaurantInfo;
+//    String restoName;
+//    String city;
     List<Dish> dishes;
 
-    public CatalogItem(String restoName, String city, List<Dish> dishes) {
-        this.restoName = restoName;
-        this.city = city;
+    public CatalogItem(RestaurantInfo restaurantInfo, List<Dish> dishes) {
+        this.restaurantInfo = restaurantInfo;
         this.dishes = dishes;
     }
 
-    public String getRestoName() {
-        return restoName;
+    public RestaurantInfo getRestaurantInfo() {
+        return restaurantInfo;
     }
 
-    public void setRestoName(String restoName) {
-        this.restoName = restoName;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
+    public void setRestaurantInfo(RestaurantInfo restaurantInfo) {
+        this.restaurantInfo = restaurantInfo;
     }
 
     public List<Dish> getDishes() {
