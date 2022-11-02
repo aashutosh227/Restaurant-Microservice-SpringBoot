@@ -31,10 +31,10 @@ public class CatalogResources {
     public Catalogs getAllCatalog(){
 
         catalogs.setCatalogItems(Collections.singletonList(new CatalogItem(
-                restTemplate.getForObject("http://restaurant-info-service/restaurantInfo/2", RestaurantInfo.class),
+                restTemplate.getForObject("http://localhost:8082/restaurantInfo/2", RestaurantInfo.class),
                 Collections.singletonList(webClientBuilder.build()
                         .get()
-                        .uri("http://dish-info-service/dishes/2")
+                        .uri("http://localhost:8081/dishes/2")
                         .retrieve()
                         .bodyToMono(Dish.class)
                         .block()))));
